@@ -1,218 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- 
-  <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches" rel="stylesheet">
+  <meta name="description" content="Cyber News Bits — live cybersecurity and tech news feed. Real-time updates on malware, breaches, ransomware and vulnerabilities.">
+  <meta name="theme-color" content="#070b14">
 
+  <title>Cyber News Bits | Live Cybersecurity News</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Share+Tech+Mono&family=Staatliches&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/08f4295781.js" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
 
-
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" media="screen and (max-width: 768px)" href=".css/mobile.css">
-  <link rel="shortcut icon" type="image/x-icon" href="ic_launcher.png">
-  <title>Cyber News Bits | Latest News</title>
+  <!-- Prevent theme flash: set attribute before paint -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('cnb-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
+
+  <!-- ═══ NAV ═══ -->
   <nav id="main-nav">
-
     <div class="container">
+      <a class="nav-brand" href="index.html">
+        <img src="image-removebg-preview.png" alt="Cyber News Bits">
+      </a>
 
-      <img src="image-removebg-preview.png" alt="Cyber News Bits" class="logo">
-      
-      <div class="social">
-        
-<a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="https://www.instagram.com/cybernewsbits/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+      <div class="nav-links" id="navLinks">
+        <a class="current" href="index.html">Home</a>
+        <a href="article.html">Article</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
       </div>
 
-      <ul>
-        <li><a class="current" href="index.html">Home</a></li>
-        <li><a href="article.html">Article</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-       
-        
-      </ul>
-
+      <div class="nav-actions">
+        <div class="nav-social">
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/cybernewsbits/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <button id="themeToggle" aria-label="Toggle theme">
+          <span class="knob"></span>
+        </button>
+        <button id="navBurger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <!-- Showcase -->
-  <header id="showcase">
-
-    <div class="container">
-
-      <div class="showcase-container">
-
-        <div class="showcase-content">
-
-          <div class="category category-sports">Sports</div>
-
-          <h1>CYber News Bits</h1>
-
-          <p>"Unveiling the Digital Frontier: Empowering Minds with Cyber and Tech News!"</p>
-          
-          <a href="article.html" class="btn btn-primary">Read More</a>
-        
-        </div>
-      
-      </div>
-    
-    </div>
- 
-  </header>
-
-  <!-- Home Articles -->
-  <section id="home-articles" class="py-2">
-    <div class="container">
-        <h2>Latest News</h2>
-
-        <div class="articles-container">
-
-          <article class="card bg-dark">
-            <img src="img/article/galaxy.jpg" alt="">
-            <div>
-              <div class="category category-ent">Space</div>
-              <h3>
-                <a href="article.html">Powerful solar storm slashes tail of comet that amazed us days ago, NASA captures rare event</a>
-              </h3>
-              <p>Scientists have captured a rare stellar event thanks to the latest space technology. 
-                The sparkling sea green comet Nishimura gave skywatchers on Earth a rare once-in-430-years 
-                glimpse just days ago. It has now helped us witness an extraordinary event where it was 
-                smashed into by a powerful solar storm as it did a slingshot around the Sun. The event took place right after Nishimura successfully lived through its closest approach to the Sun amid fears that it might burn up. It was then hit by a possible coronal mass ejection. The comet saw its bright green trail cut off from the powerful solar storm, with a NASA spacecraft capturing the event. A video clip of the comet losing its tail has also been released and is wowing netizens. It was captured by NASA's Solar Terrestrial Relations Observatory (STEREO-A) spacecraft.</p>         </div>
-          </article>
-
-          <article class="card">
-            <img src="img/article/semiconductor.png" alt="">
-            <div class="category category-sports">Technology</div>
-            <h3>
-              <a href="article.html">One of A Kind</a>
-            </h3>
-            <p>Global Foundries, a semiconductor company worth
-               $30 billion, aims to expand its Aerospace and Defence 
-               presence in Karnataka and hire 200 skilled workers in
-                Bengaluru. This follows discussions with a Karnataka 
-                business delegation visiting the USA to attract investments. Dell, a $50 billion company with a significant R&D center in Bengaluru, is also considering further investment and seeks government support for overcoming import restrictions. The delegation attended a Business Roundtable hosted by the US-India Chamber of Commerce, with around 60 attendees, including CEOs and senior VPs.</p>       </article>
-
-          <article class="card bg-dark">
-            <img src="img/article/camera.jpg" alt="">
-            <div class="category category-tech">Technology</div>
-            <h3>
-              <a href="article.html">Essentials for Cyber News</a>
-            </h3>
-            <p>Cyber news refers to news and information related to 
-              cybersecurity and digital threats. It covers topics such 
-              as data breaches, hacking incidents, malware attacks, security vulnerabilities, 
-              and developments in cybersecurity technology and practices. Cyber news is essential for 
-              individuals, businesses, and organizations to stay informed about potential risks and 
-              protective measures in the digital realm. It helps people understand the evolving landscape 
-              of online security and make informed decisions to protect their digital assets and data.</p>          </article>
-
-          <article class="card bg-primary">
-            <div class="category category-sports">malware</div>
-            <h3>
-              <a href="article.html">FBI Warns of Rising Trend of Dual Ransomware Attacks Targeting U.S. Companies</a>
-            </h3>
-            <p>The FBI has issued a warning about a new trend in 
-              ransomware attacks, where cybercriminals deploy two 
-              different ransomware variants against the same victims. 
-              This practice has been observed since at least July 2023, 
-              with various ransomware variants being used in combinations.
-               These dual attacks often occur within close proximity to each other,
-                typically within 48 hours to 10 days. Additionally, ransomware attackers are increasingly using custom data theft, wiper tools, and malware to pressure victims into paying ransoms. This combination of tactics can result in data encryption, exfiltration, and financial losses for victims. It's essential for organizations to strengthen their cybersecurity defenses by maintaining offline backups, monitoring remote connections, enforcing multi-factor authentication, auditing user accounts, and segmenting networks to prevent ransomware spread. This trend is driven by factors like the exploitation of zero-day vulnerabilities and the involvement of initial access brokers and affiliates in the ransomware landscape.</p>   <img src="img/article/hockey.jpg" alt="">
-          </article>
-
-          <article class="card bg-dark">
-            <img src="img/article/cyber.jpg" alt="">
-            <div class="category category-tech">Technology</div>
-            <h3>
-              <a href="article.html">Microsoft's AI-Powered Bing Chat Ads May Lead Users to Malware-Distributing Sites</a>
-            </h3>
-            <p>Malicious ads within Microsoft Bing's AI 
-              chatbot, Bing Chat, are being used to 
-              distribute malware when users search for 
-            popular tools. These ads, introduced in February 2023, 
-            can trick users into visiting malicious sites and installing
-             malware directly from chat conversations. For example, 
-             a legitimate software search could return a link with a malicious 
-             ad before the official site. Clicking the link takes users to a 
-             traffic direction system (TDS), and from there, a decoy page containing 
-             rogue installer scripts. Threat actors have infiltrated the ad accounts of 
-             legitimate businesses to create these ads. This underscores the evolving nature 
-             of cyber threats and the importance of caution when clicking on links or ads.
-            </p></article>
-
-          <article class="card">
-            <img src="img/article/malware.png" alt="">
-            <div class="category category-sports">Cyber attacks</div>
-            <h3>
-              <a href="article.html">Xenomorph Malware targets US banks</a>
-            </h3>
-            <p>Xenomorph malware has 
-              resurfaced in a new distribution 
-              campaign, targeting over 30 US banks and various
-               financial institutions worldwide. Cybersecurity 
-               analysts from ThreatFabric uncovered this resurgence, 
-               revealing that the campaign uses deceptive phishing webpages 
-               posing as Chrome updates to lure victims into downloading malicious 
-               APKs. Xenomorph is known for using overlays to capture personally 
-               identifiable information (PII) and features a sophisticated automated 
-               transfer system (ATS) engine. The latest campaign has expanded geographically, 
-               with numerous Xenomorph downloads in Spain and the United States. The malware has 
-               also added new capabilities, including anti-sleep features and touch action simulation, 
-               making it highly adaptable. It is being distributed alongside other powerful desktop stealers 
-               and offered as Malware-as-a-Service (MaaS), highlighting cybercriminals' persistent efforts to
-                maximize profits. Xenomorph remains a significant Android Banking malware threat.</p>  </article>
-
-          <article class="card bg-dark">
-            <div>
-              <div class="category category-ent">cyber attacks</div>
-              <h3>
-                <a href="article.html">Hackers redirect guests to fake Booking.com to steal cards</a>
-              </h3>
-              <p>A new sophisticated phishing campaign was discovered by security researchers that targets hotels, booking sites, and travel agencies, designed to steal the financial data of custom The hackers compromise and send phishing messages via the affected service’s official communication channels.
-                
-                Researchers at Perception Point found that the campaign begins with a seemingly harmless query or reference to an existing hotel reservation. It also uses advanced social engineering techniques and then send allegedly important documents via a URL.
-                
-                After clicking the URL, the victim is directed to an info-stealing malware. This malicious software is adept at collecting sensitive information, including credentials and financial data.
-                
-                The final phase of the attack involves the victim receiving a link for alleged credit card verification. This unveils a fake Booking.com payment page – designed to be another method of stealing the user’s financial info.
-                
-                Researchers from Akamai noted that the attackers gain access to legitimate customer communication channels after infiltrating the hotel’s systems. This provides them with a direct and trusted channel to their victims. Under the guise of the compromised hotel, booking service, or travel agency, the cybercriminals are able to send phishing messages that closely mimic genuine requests.
-                
-                Users must remain vigilant to protect against such phishing campaigns. Avoid clicking on unsolicited links, even if they seem legitimate, and exercise caution with messages urging immediate action.</p>   </div>
-            <img src="img/article/chess.png" alt="">
-          </article>
-
+  <main>
+    <!-- ═══ HERO ═══ -->
+    <header id="hero">
+      <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="hero-content">
+          <div class="live-pill"><span class="dot"></span> Live Feed // Real-Time</div>
+          <h1 class="glitch-title" data-text="CYBER NEWS BITS">CYBER NEWS BITS</h1>
+          <p class="hero-sub">
+            Unveiling the Digital Frontier — <span class="mono">live</span> cybersecurity intel,
+            streamed straight from the source. No keys, no signup, <span class="mono">no tracking</span>.
+          </p>
+          <a href="#feed" class="btn btn-primary"><i class="fas fa-terminal"></i> Enter the Feed</a>
+          <a href="about.html" class="btn btn-ghost">Who We Are</a>
         </div>
 
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="main-footer" class="py-2">
-    <div class="container footer-container">
-      <div>
-        <img src="img/logo-removebg-preview.png" alt="Cyber News Bits">
-        <strong><p>"Cyber News Bits" comprises cybersecurity enthusiasts dedicated to promoting online safety. They raise awareness about cyber threats and educate the public on staying secure online. Their efforts contribute to a safer digital world. For details, visit their Instagram page. #CyberSecurity #OnlineSafety</p></strong>    </div>
-
-
-     
-      
-
-      <div>
-        <p>
-          Copyright &copy; Cyber News Bits ~ 2023, All Rights Reserved
-        </p>
+        <div class="hero-term" aria-hidden="true">
+          <div class="term-bar">
+            <span></span><span></span><span></span>
+            <em>cnb@feed:~$</em>
+          </div>
+          <div class="term-body">
+            <div><span class="ln">$</span> <span class="cmd">cnb --fetch --sources all</span></div>
+            <div><span class="ok">[✓]</span> thehackernews.com … <span class="ok">connected</span></div>
+            <div><span class="ok">[✓]</span> bleepingcomputer.com … <span class="ok">connected</span></div>
+            <div><span class="ok">[✓]</span> securityweek.com … <span class="ok">connected</span></div>
+            <div><span class="ok">[✓]</span> theregister.com … <span class="ok">connected</span></div>
+            <div><span class="ok">[✓]</span> krebsonsecurity.com … <span class="ok">connected</span></div>
+            <div><span class="ok">[+4]</span> more sources … <span class="ok">streaming</span></div>
+            <div><span class="warn">[!]</span> threats detected: monitoring</div>
+            <div><span class="ln">$</span> <span class="cmd">tail -f /var/log/threats</span> <span class="cursor"></span></div>
+          </div>
+        </div>
       </div>
+    </header>
 
+    <!-- ═══ BREAKING TICKER ═══ -->
+    <div id="ticker" aria-label="Breaking news">
+      <div class="ticker-label"><span class="dot"></span> LIVE</div>
+      <div class="ticker-track">
+        <div class="ticker-move" id="tickerItems">
+          <a href="#feed"><span class="src">[SYS]</span>Booting live cybersecurity feed…</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ NEWS FEED ═══ -->
+    <section id="feed-section">
+      <div class="container" id="feed">
+        <div class="feed-head reveal">
+          <h2>Latest <em>// Threat Intel</em></h2>
+          <div class="updated-note" id="updatedNote">SYNCING FEEDS <b>…</b></div>
+        </div>
+
+        <div class="feed-controls reveal" style="--d:.1s">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search threats, CVEs, malware…" autocomplete="off">
+            <i class="fas fa-magnifying-glass"></i>
+          </div>
+          <div class="filter-chips" id="filterChips">
+            <button class="chip active" data-cat="all">all</button>
+          </div>
+          <button class="btn btn-ghost" id="refreshBtn" style="padding:.6rem 1.1rem">
+            <i class="fas fa-rotate-right"></i> Refresh
+          </button>
+        </div>
+
+        <div class="news-grid" id="newsGrid">
+          <!-- skeletons injected by news.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="img/logo-removebg-preview.png" alt="Cyber News Bits">
+          <p>Cyber News Bits comprises cybersecurity enthusiasts dedicated to promoting online safety — raising awareness about cyber threats and educating the public on staying secure online.</p>
+          <div class="footer-social">
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/cybernewsbits/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>// NAVIGATE</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="article.html">Article</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>// SOURCES</h4>
+          <ul>
+            <li><a href="https://thehackernews.com" target="_blank" rel="noopener">The Hacker News</a></li>
+            <li><a href="https://www.bleepingcomputer.com" target="_blank" rel="noopener">BleepingComputer</a></li>
+            <li><a href="https://www.securityweek.com" target="_blank" rel="noopener">SecurityWeek</a></li>
+            <li><a href="https://www.theregister.com/security/" target="_blank" rel="noopener">The Register</a></li>
+            <li><a href="https://krebsonsecurity.com" target="_blank" rel="noopener">Krebs on Security</a></li>
+            <li><a href="https://www.helpnetsecurity.com" target="_blank" rel="noopener">Help Net Security</a></li>
+            <li><a href="https://gbhackers.com" target="_blank" rel="noopener">GBHackers</a></li>
+            <li><a href="https://www.cisa.gov" target="_blank" rel="noopener">CISA Advisories</a></li>
+            <li><a href="https://www.schneier.com" target="_blank" rel="noopener">Schneier on Security</a></li>
+            <li><a href="https://news.ycombinator.com" target="_blank" rel="noopener">Hacker News</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Copyright &copy; Cyber News Bits ~ <span id="year">2025</span>, All Rights Reserved</span>
+        <span>Built with <a href="#">zero API keys</a> // runs on GitHub Pages</span>
+      </div>
     </div>
   </footer>
 
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/news.js"></script>
 </body>
 </html>

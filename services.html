@@ -1,167 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- 
-  <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches" rel="stylesheet">
+  <meta name="description" content="Cyber News Bits services — threat awareness, security education, and community-driven cyber safety.">
+  <meta name="theme-color" content="#070b14">
+  <title>Services | Cyber News Bits</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Share+Tech+Mono&family=Staatliches&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/08f4295781.js" crossorigin="anonymous"></script>
 
-
-
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
-  <link rel="shortcut icon" type="image/x-icon" href="ic_launcher.png">
-  <title>Cyber News Bits | Latest News</title>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('cnb-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
+
   <nav id="main-nav">
-
     <div class="container">
-      
-      <img src="img/logo.jpeg" alt="Cyber News BIts" class="logo">
-      
-      <div class="social">
-        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="https://instagram.com/cybernewsbits" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+      <a class="nav-brand" href="index.html">
+        <img src="image-removebg-preview.png" alt="Cyber News Bits">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="article.html">Article</a>
+        <a href="about.html">About</a>
+        <a class="current" href="services.html">Services</a>
       </div>
-
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="current" href="services.html">Services</a></li>
-        
-      </ul>
-
+      <div class="nav-actions">
+        <div class="nav-social">
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/cybernewsbits/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <button id="themeToggle" aria-label="Toggle theme"><span class="knob"></span></button>
+        <button id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </nav>
 
-  <!-- Showcase -->
-  
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">// index</div>
+        <h1>Our <span style="color:var(--accent)">Services</span></h1>
+        <p>Free, community-driven cybersecurity awareness — what we do and why.</p>
+      </div>
+    </section>
 
-    
+    <section class="container">
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="num">01</span>
+          <i class="fas fa-satellite-dish"></i>
+          <h3>Live Threat Feed</h3>
+          <p>Real-time cybersecurity news aggregated from The Hacker News, BleepingComputer and Hacker News — refreshed automatically every 5 minutes, categorised and searchable.</p>
+        </div>
 
-        
- <section id="article">
+        <div class="service-card reveal" style="--d:.08s">
+          <span class="num">02</span>
+          <i class="fas fa-bug"></i>
+          <h3>Malware & Ransomware Alerts</h3>
+          <p>Track active malware campaigns, ransomware gangs and infection vectors as they're reported — so you know what's circulating before it reaches you.</p>
+        </div>
 
+        <div class="service-card reveal" style="--d:.16s">
+          <span class="num">03</span>
+          <i class="fas fa-shield-halved"></i>
+          <h3>Vulnerability Tracking</h3>
+          <p>Zero-days, CVE disclosures and critical patches from across the industry, filtered out of the noise and surfaced in plain language.</p>
+        </div>
+
+        <div class="service-card reveal" style="--d:.24s">
+          <span class="num">04</span>
+          <i class="fas fa-user-shield"></i>
+          <h3>Digital Safety Education</h3>
+          <p>Practical guides on phishing, social engineering and safe online habits — because the strongest firewall is an informed user.</p>
+        </div>
+
+        <div class="service-card reveal" style="--d:.32s">
+          <span class="num">05</span>
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Awareness Content</h3>
+          <p>Easy-to-share explainers on Instagram and YouTube that break down complex security incidents for everyday readers.</p>
+        </div>
+
+        <div class="service-card reveal" style="--d:.4s">
+          <span class="num">06</span>
+          <i class="fas fa-code"></i>
+          <h3>Open & Transparent</h3>
+          <p>This entire site is static, open-source and runs on GitHub Pages — no servers, no tracking, no data collection. Inspect it yourself.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="main-footer">
     <div class="container">
-
-      <div class="page-container">
-
-        <article class="card">
-          <img src="./img/studio.jpg" alt="">
-          <h1 class="l-heading">Our <span>History</span></h1>
-
-          <div class="meta">
-            <small>
-              <i class="fas fa-user"></i> Written By Cyber News Bits Team
-            </small>
-
-            <div class="category category-ent">Cybersecurity</div>
-
-          </div>
-          
-        <strong> <p>The History of Cyber News is a fascinating journey that parallels the rapid development of the internet and technology. Here's a brief overview:</p>
-
-            1. Early Internet Era (1970s - 1990s):-
-               - In the early days of the internet, there were no dedicated Cyber News platforms as we know them today.
-               - News related to emerging computer technologies and the ARPANET (the precursor to the internet) was primarily shared through academic and research networks.
-            
-           <p> 2. 1990s - The Emergence of Online Tech News:-
-               - As the internet became more accessible to the public in the 1990s, dedicated technology news websites began to emerge.
-               - Websites like CNET (founded in 1994) and ZDNet (founded in 1991) started reporting on tech-related developments and innovations.</p>
-            
-            <p> 3. Dot-Com Bubble and Burst (Late 1990s - Early 2000s):
-               - The late 1990s saw the rapid rise of tech companies and the dot-com bubble. Cyber News played a crucial role in reporting on this phenomenon.
-               - However, the bubble burst in the early 2000s, leading to a decline in tech-related news.</p></strong>
-            
-               <strong></p> 4. Rise of Tech Blogging and Social Media (Mid-2000s):-
-               - Blogging platforms like TechCrunch (founded in 2005) and Gizmodo (founded in 2002) gained prominence in the mid-2000s.
-               - The emergence of social media platforms like Twitter allowed for the rapid dissemination of Cyber News.
-            
-            <p> 5. Cybersecurity and Privacy Concerns (2010s - Present):
-               - The 2010s brought a surge in cybercrime, data breaches, and privacy concerns. Cyber News began to focus more on these issues.
-               - Prominent cybersecurity news outlets like KrebsOnSecurity (founded by Brian Krebs) gained recognition for their investigative reporting.</p>
-            
-              <p> 6. Tech Giants and Innovation (2010s - Present):-
-               - The rise of tech giants like Apple, Google, Amazon, and Facebook became a central theme in Cyber News.
-               - News outlets started covering innovations like AI, blockchain, and IoT.</p>
-            
-              <p>7. Diversification and Globalization (2010s - Present):-
-               - The Cyber News landscape diversified, with many niche publications focusing on specific tech areas, such as AI, cybersecurity, and fintech.
-               - International tech news became increasingly important as tech innovation spread globally.</p>
-            
-            8. Ethical and Social Implications (2010s - Present):-
-               - Cyber News started addressing the ethical and societal implications of technology, including issues like online privacy, fake news, and the impact of social media on society.
-            
-              <p> 9. 2020s and Beyond:-
-               - The 2020s saw the continuation of these trends, with an increased focus on emerging technologies like quantum computing, 5G, and biotechnology.
-               - The importance of cybersecurity and digital privacy remained at the forefront of Cyber News.</p>
-            
-            The History of Cyber News reflects the evolving nature of technology and its impact on society. As technology continues to advance, Cyber News will likely adapt and expand to cover new developments and challenges in the digital world.</p></strong>
-        
-        </article>
-
-        <aside id="categories" class="card">
-         
-          <h2>Our Services</h2>
-          
-          <ul class="list">
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Space</a></li>
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Cyber Attacks</a></li>
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Technology</a></li>
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Cyber Security</a></li>
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Malware</a></li>
-         
-          </ul>
-       
-        </aside>
-
-        <aside class="card bg-secondary">
-          <h2>Follow Us on Instagram</h2>
-         
-          <a href="http://instagram.com/cybernewsbits/" target="_blank"><i class="btn btn-dark btn-block">Join Now</a></i>
-        </aside>
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>Copyright &copy; Cyber News Bits ~ <span id="year">2025</span>, All Rights Reserved</span>
+        <span><a href="index.html">back to feed</a></span>
       </div>
-    </div>
-  </section>
-        
-    
-
- 
-
-  
-
-  <!-- Footer -->
-  <footer id="main-footer" class="py-2">
-    <div class="container footer-container">
-      <div>
-        <img src="img/logo.jpeg" alt="">
-        <p>Cyber News Bits is a Digital Company based on Dallas, TX. Our services ranges from Website Development, Application Development, Cyber Solutions & Consultations and Video Production. </p>
-      </div>
-
-
-      <div>
-        <h3>Site Links</h3>
-        <ul class="list">
-                    
-          <li><a href="about.html">About Us</a></li>
-         
-        </ul>
-      </div>
-
-
-      <div>
-        <p>
-          Copyright &copy; Cyber News Bits ~ 2022, All Rights Reserved
-        </p>
-      </div>
-
     </div>
   </footer>
 
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
